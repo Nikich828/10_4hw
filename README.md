@@ -37,34 +37,8 @@
 4) Сделайте запрос на 80 порт на внешний IP-адрес балансировщика и убедитесь, что вы получаете ответ в виде дефолтной страницы Nginx.
 
 
-![alt text](https://github.com/Nikich828/10_1_hw/blob/main/1.JPG)
-
-
-### Задание 2
-
-
-1) Запустите две виртуальные машины Linux, установите и настройте сервис Keepalived как в лекции, используя пример конфигурационного файла.
-2) Настройте любой веб-сервер (например, nginx или simple python server) на двух виртуальных машинах
-3) Напишите Bash-скрипт, который будет проверять доступность порта данного веб-сервера и существование файла index.html в root-директории данного веб-сервера.
-4) Настройте Keepalived так, чтобы он запускал данный скрипт каждые 3 секунды и переносил виртуальный IP на другой сервер, если bash-скрипт завершался с кодом, отличным от нуля (то есть порт веб-сервера был недоступен или отсутствовал index.html). Используйте для этого секцию vrrp_script
-5) На проверку отправьте получившейся bash-скрипт и конфигурационный файл keepalived, а также скриншот с демонстрацией переезда плавающего ip на другой сервер в случае недоступности порта или файла index.html
-
-Добавил unicast_peer в конфигурацию т.к. в яндекс облаке отключен мультикаст
-
-Теперь сосесди явно смотрят друг на друга
-
-Проверяем на какой из двух машин висит виртальный айпи.
-![alt text](https://github.com/Nikich828/10_1_hw/blob/main/2.jpg)
-![alt text](https://github.com/Nikich828/10_1_hw/blob/main/3.jpg)
-Имитируем недоступность порта остановкой работы процесса
-![alt text](https://github.com/Nikich828/10_1_hw/blob/main/4.jpg)
-Вилим что айпи переместился на другую машину
-![alt text](https://github.com/Nikich828/10_1_hw/blob/main/5.jpg)
-Восстанавливаем работу на первой машине. Айпи вернулся снова на первую машину.
-![alt text](https://github.com/Nikich828/10_1_hw/blob/main/6.jpg)
-![alt text](https://github.com/Nikich828/10_1_hw/blob/main/7.jpg)
-Теперь с имитируем недоступность файла index.html путем переименовывания файла
-![alt text](https://github.com/Nikich828/10_1_hw/blob/main/8.png)
-![alt text](https://github.com/Nikich828/10_1_hw/blob/main/9.jpg)
-Работает. Вернем назад.
-![alt text](https://github.com/Nikich828/10_1_hw/blob/main/10.jpg)
+![alt text](https://github.com/Nikich828/10_4hw/blob/master/1.jpeg)
+![alt text](https://github.com/Nikich828/10_4hw/blob/master/2.jpeg)
+![alt text](https://github.com/Nikich828/10_4hw/blob/master/3.jpeg)
+![alt text](https://github.com/Nikich828/10_4hw/blob/master/4.jpeg)
+![alt text](https://github.com/Nikich828/10_4hw/blob/master/5.jpeg)
